@@ -1,0 +1,40 @@
+.brands {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	margin-top: 48px;
+	margin-bottom: 82px;
+	color: #eeeeee;
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+}
+
+.brands li {
+	position: relative;
+	box-sizing: border-box;
+	width: 25%;
+	height: 52px;
+	margin: 64px 0;
+	border-right: 2px solid;
+}
+
+.brands li:nth-child(4n) {
+	border-right: none;
+}
+
+.brands a {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0.2;
+}
+
+.brands a:hover,
+.brands a:focus {
+	opacity: 1;
+}
+
+.brands a:active {
+	opacity: 0.1;
+}
