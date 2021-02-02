@@ -1,11 +1,22 @@
-.popup {
+.popup-wrap {
 	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	display: flex;
+	align-items: flex-start;
+}
+
+.popup {
 	top: 50%;
 	left: 50%;
 	display: none;
 	box-sizing: border-box;
 	width: 960px;
 	padding: 67px 100px 84px;
+	overflow-y: auto;
 	background-color: #ffffff;
 	box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
 	transform: translate(-50%, -50%);

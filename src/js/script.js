@@ -1,19 +1,14 @@
-const feedbackOpener = document.querySelector('.feedback-send');
+const feedbackOpen = document.querySelector('.feedback-send');
+const feedbackClose = document.querySelector('.popup-close');
+const popupWrap = document.querySelector('.popup-wrap');
 const popup = document.querySelector('.popup');
 const nameField = document.querySelector('input[name=name]');
-const closeBtn = document.querySelector('.popup-close');
 const form = document.querySelector('.popup-form');
 
-feedbackOpener.addEventListener('click', (evt) => {
+feedbackOpen.addEventListener('click', (evt) => {
 	evt.preventDefault();
 	popup.classList.add('popup-show');
 	nameField.focus();
-});
-
-closeBtn.addEventListener('click', (evt) => {
-	evt.preventDefault();
-	popup.classList.remove('popup-show');
-	feedbackOpener.focus();
 });
 
 form.addEventListener('submit', (evt) => {
@@ -24,5 +19,13 @@ form.addEventListener('submit', (evt) => {
 			evt.preventDefault();
 			field.classList.add('field-invalid');
 		}
+	}
+});
+
+popupWrap.addEventListener('click', (evt) => {
+	if (evt.target === popupWrap || evt.target === feedbackClose) {
+		evt.preventDefault();
+		popup.classList.remove('popup-show');
+		feedbackOpen.focus();
 	}
 });
