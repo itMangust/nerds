@@ -2,4 +2,4 @@
 
 Собрано с помощью `gulp`, опубликовано с помощью `github actions`.
 
-[Посмотреть](https://efiand.github.io/gulp-simple)
+[Посмотреть](https://itMangust.github.io/nerds)
