@@ -5,27 +5,24 @@
 	bottom: 0;
 	left: 0;
 	z-index: 1;
-	display: flex;
+	display: none;
 	align-items: flex-start;
 }
 
+.popup-wrap-show {
+	display: flex;
+}
+
 .popup {
-	top: 50%;
-	left: 50%;
-	display: none;
 	box-sizing: border-box;
 	width: 960px;
+	margin: auto;
 	padding: 67px 100px 84px;
 	overflow-y: auto;
 	background-color: #ffffff;
 	box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
-	transform: translate(-50%, -50%);
 	animation-name: bounce;
 	animation-duration: 0.6s;
-}
-
-.popup-show {
-	display: block;
 }
 
 .popup h2,

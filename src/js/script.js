@@ -1,13 +1,12 @@
 const feedbackOpen = document.querySelector('.feedback-send');
 const feedbackClose = document.querySelector('.popup-close');
 const popupWrap = document.querySelector('.popup-wrap');
-const popup = document.querySelector('.popup');
 const nameField = document.querySelector('input[name=name]');
 const form = document.querySelector('.popup-form');
 
 feedbackOpen.addEventListener('click', (evt) => {
 	evt.preventDefault();
-	popup.classList.add('popup-show');
+	popupWrap.classList.add('popup-wrap-show');
 	nameField.focus();
 });
 
@@ -25,7 +24,7 @@ form.addEventListener('submit', (evt) => {
 popupWrap.addEventListener('click', (evt) => {
 	if (evt.target === popupWrap || evt.target === feedbackClose) {
 		evt.preventDefault();
-		popup.classList.remove('popup-show');
+		popupWrap.classList.remove('popup-wrap-show');
 		feedbackOpen.focus();
 	}
 });
