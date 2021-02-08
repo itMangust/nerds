@@ -2,6 +2,10 @@
 
 {# Страница, на которую можно вешать ссылки при разработке, альтернатива #! #}
 
-{% block main %}
-	<h1>Страница в разработке</h1>
+{% set page = 'blank' %}
+
+{% block heading %}
+	<h2 class="container">Страница в разработке</h2>
 {% endblock %}
+
+{% block main %}{% endblock %}
