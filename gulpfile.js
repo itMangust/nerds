@@ -40,6 +40,11 @@ if (IS_DEV) {
 	LESS_SRC.push('src/less/dev.less');
 }
 
+const JS_SRC = ['src/js/script.js'];
+if (IS_DEV) {
+	JS_SRC.push('src/js/dev.js');
+}
+
 // Сборка HTML
 const html = () => src('src/twig/pages/**/*.twig')
 	.pipe(data((file) => {
@@ -78,7 +83,7 @@ const cssTest = () => src('src/less/**/*.less')
 	.pipe(lintspaces.reporter());
 
 // Сборка JS
-const js = () => src('src/js/script.js')
+const js = () => src(JS_SRC)
 	.pipe(require('vinyl-named')())
 	.pipe(require('webpack-stream')(WEBPACK, require('webpack')))
 	.pipe(dest(`${DEST}/js`));
