@@ -9,7 +9,7 @@ const managePP = (pp = parseInt(localStorage.getItem('pp'), 10)) => {
 managePP();
 
 document.addEventListener('keydown', (evt) => {
-	if (document.activeElement === document.body && evt.key === 'p') {
+	if (document.activeElement === document.body && evt.code === 'KeyP') {
 		const isPP = Boolean(Number(localStorage.getItem('pp')));
 		const pp = Number(!isPP);
 
