@@ -1,10 +1,15 @@
+{% set pixelperfect = IS_DEV ? 'class="pixelperfect" style="background-image: url(img/pixelperfect/' ~ page ~ '.jpg)"' %}
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" {{ pixelperfect }}>
 <head>
 	<meta charset="UTF-8">
 	<title>Веб-студия "Нердс" {{ page_title }}</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	{% if IS_DEV %}
+		<link rel="stylesheet" href="css/dev.css">
+	{% endif %}
 </head>
 
 <body>
